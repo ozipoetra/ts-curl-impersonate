@@ -432,7 +432,7 @@ export class RequestBuilder {
 		const command = [path.join(BINARY_PATH, browser.binary), ...flags, ...preset.flags, ...headers, "-s", `-w "\\n%{json}"`, `-X ${this._method}`, `"${this._url}"`].join(" ");
 
 		return new Promise((resolve, reject) => {
-			exec(command, { cwd: BINARY_PATH, maxBuffer: Infinity }, (err, stdout, stderr) => {
+			exec(command, { cwd: BINARY_PATH, maxBuffer: Infinity, windowsHide: true }, (err, stdout, stderr) => {
 				if (err) {
 					reject(err);
 					return;
