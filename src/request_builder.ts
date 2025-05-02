@@ -461,6 +461,9 @@ export class RequestBuilder {
 	}
 
 	private buildHeaderFlags(headers: Record<string, string>) {
-		return Object.entries(headers).map(([key, value]) => `-H "${key}: ${value}"`);
+		return Object.entries(headers).map(([key, value]) => {
+			const safeValue = value.replace(/(["\\])/g, "\\$1");
+			return `-H "${key}: ${safeValue}"`;
+		});;
 	}
 }
