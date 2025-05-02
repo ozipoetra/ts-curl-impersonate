@@ -1,6 +1,6 @@
 {
     "name": "@jokoprasetyo/ts-curl-impersonate",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A typescript wrapper around cURL-impersonate.",
     "main": "dist/index.js",
     "scripts": {
