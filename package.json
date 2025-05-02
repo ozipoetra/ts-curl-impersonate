@@ -1,6 +1,6 @@
 {
     "name": "@jokoprasetyo/ts-curl-impersonate",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "A typescript wrapper around cURL-impersonate.",
     "main": "dist/index.js",
     "type": "module",
@@ -14,8 +14,7 @@
         "pretty": "prettier . --write",
         "pretty:check": "prettier . --check",
         "test": "jest",
-        "test:clean": "yarn clean && yarn build && yarn test",
-        "postinstall": "node ./scripts/postinstall.js"
+        "test:clean": "yarn clean && yarn build && yarn test"
     },
     "keywords": [
         "web-scraping",
