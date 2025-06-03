@@ -3,7 +3,7 @@ import { RequestBuilder } from "../src";
 
 test("Returns a successful GET reponse on TLS Fingerprinting protected URL", async () => {
     const response = await new RequestBuilder()
-        .url("https://api.amiami.com/api/v1.0/items?s_keywords=touhou%20plush&pagecnt=2&pagemax=30&lang=eng")
+        .url("https://shared.animez.my.id")
         .header("x-user-key", "amiami_dev")
         .send();
 

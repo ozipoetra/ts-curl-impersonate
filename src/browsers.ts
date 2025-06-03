@@ -1,6 +1,6 @@
 import path from "node:path";
 
-export type BrowserType = "chrome" | "firefox" | "safari";
+export type BrowserType = "chrome";
 
 export interface Browser {
     name: BrowserType;
@@ -11,50 +11,16 @@ export interface Browser {
 export const BINARY_PATH = path.join(__dirname, "..", "bin", process.platform);
 
 export const BROWSERS: Record<string, Browser[] | undefined> = {
-    win32: [
-        {
-            name: "chrome",
-            arch: "x64",
-            binary: "chrome-x64.exe"
-        },
-        {
-            name: "safari",
-            arch: "x64",
-            binary: "chrome-x64.exe"
-        }
-    ],
-    darwin: [
-        {
-            name: "firefox",
-            arch: "x64",
-            binary: "firefox-x64"
-        },
-        {
-            name: "chrome",
-            arch: "x64",
-            binary: "chrome-x64"
-        }
-    ],
     linux: [
         {
-            name: "firefox",
-            arch: "x64",
-            binary: "firefox-x64"
-        },
-        {
             name: "chrome",
             arch: "x64",
-            binary: "chrome-x64"
-        },
-        {
-            name: "firefox",
-            arch: "arm64",
-            binary: "firefox-arm64"
+            binary: "curl-x64"
         },
         {
             name: "chrome",
             arch: "arm64",
-            binary: "chrome-arm64"
+            binary: "curl-arm64"
         }
     ]
 };
